@@ -25,6 +25,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gPP-Qf-8k8">
                                 <rect key="frame" x="165" y="508.5" width="84" height="30"/>
                                 <state key="normal" title="Show modal"/>
+                                <connections>
+                                    <action selector="tappedShowModal:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BdV-HI-UXr"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -36,10 +39,54 @@
                             <constraint firstItem="97E-61-7ZF" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="bW2-qn-HIf"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="textLabel" destination="97E-61-7ZF" id="501-43-ufY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="139" y="76"/>
+        </scene>
+        <!--Modal View Controller-->
+        <scene sceneID="2Fr-IP-vQA">
+            <objects>
+                <viewController id="4iM-v2-61f" customClass="ModalViewController" customModule="DelegateExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Bg5-f0-Vrf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hVH-Dp-SxW">
+                                <rect key="frame" x="188.5" y="228" width="37" height="30"/>
+                                <state key="normal" title="Done"/>
+                                <connections>
+                                    <action selector="tappedDone:" destination="4iM-v2-61f" eventType="touchUpInside" id="x2n-fZ-zrQ"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JYw-ZQ-9Ry">
+                                <rect key="frame" x="147" y="144" width="120" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="mvD-ZW-WcD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="cPt-BZ-39A"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="hVH-Dp-SxW" firstAttribute="top" secondItem="JYw-ZQ-9Ry" secondAttribute="bottom" constant="50" id="2HW-1H-F3T"/>
+                            <constraint firstItem="hVH-Dp-SxW" firstAttribute="centerX" secondItem="Bg5-f0-Vrf" secondAttribute="centerX" id="A7P-do-nLd"/>
+                            <constraint firstItem="JYw-ZQ-9Ry" firstAttribute="top" secondItem="cPt-BZ-39A" secondAttribute="top" constant="100" id="nW3-l1-1Qn"/>
+                            <constraint firstItem="JYw-ZQ-9Ry" firstAttribute="centerX" secondItem="Bg5-f0-Vrf" secondAttribute="centerX" id="u1m-5Z-Tlb"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textField" destination="JYw-ZQ-9Ry" id="wNp-Hk-idW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qtj-Oe-GFq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="917" y="76"/>
         </scene>
     </scenes>
     <resources>
