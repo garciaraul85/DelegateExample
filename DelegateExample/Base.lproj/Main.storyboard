@@ -50,7 +50,7 @@
         <!--Modal View Controller-->
         <scene sceneID="2Fr-IP-vQA">
             <objects>
-                <viewController id="4iM-v2-61f" customClass="ModalViewController" customModule="DelegateExample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ModalViewController" id="4iM-v2-61f" customClass="ModalViewController" customModule="DelegateExample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Bg5-f0-Vrf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
